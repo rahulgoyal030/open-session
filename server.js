@@ -10,6 +10,8 @@ var bodyParser = require('body-parser');
 //var login = require("./routes/login");
 //var signup = require("./routes/signup");
 var event = require("./routes/event");
+var index = require("./routes/index");
+var signup = require("./routes/signup");
 var app= express();
 
 
@@ -25,7 +27,9 @@ app.set('view engine','ejs');
 //app.use('/',index);     // first page open
 //app.use('/home',login);  // it is calling login check script
 //app.use('/signup',signup);  // for new user enrty 
-
+app.use('/',index);
 app.use('/event',event);
+app.use('/signup',signup);
 app.listen(3000);
 console.log("server on ");
+

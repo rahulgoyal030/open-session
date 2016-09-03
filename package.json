@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Web Session Portal",
   "dependencies": {
-    "body-parser": "~1.12.3",
+    "body-parser": "^1.12.4",
     "cookie-parser": "^1.3.5",
     "ejs": "^2.3.1",
     "express": "~4.5.1",
     "express-session": "^1.11.3",
-    "method-override": "~2.0.2"
+    "method-override": "~2.0.2",
+    "mysql": "^2.11.1"
   },
   "main": "server.js",
   "scripts": {
@@ -16,5 +17,8 @@
     "start": "node server.js"
   },
   "author": "rahul",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
 }
