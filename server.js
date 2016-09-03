@@ -12,7 +12,11 @@ var bodyParser = require('body-parser');
 var event = require("./routes/event");
 var index = require("./routes/index");
 var signup = require("./routes/signup");
-var home = require("./routes/home");
+var signin = require("./routes/signin");
+var home =  require("./routes/home");
+var users = require("./routes/users");
+var createEvent = require("./routes/createEvent");
+var eventLink = require("./routes/eventLink");
 var app= express();
 
 
@@ -31,7 +35,12 @@ app.set('view engine','ejs');
 app.use('/',index);
 app.use('/event',event);
 app.use('/signup',signup);
+app.use('/signin',signin);
 app.use('/home',home);
+app.use('/createEvent',createEvent);
+app.use('/users',users);
+app.use('/r',eventLink);
+
 app.listen(3000);
 console.log("server on ");
 

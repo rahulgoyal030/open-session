@@ -27,9 +27,9 @@ router.post('/', function  (req,res) {
        connection.query( query , function(err, rows) {
   			if (err) throw err;
  
-  			console.log(" working ");
+  			console.log("  ", email);
 
-  			res.render('/homePage');
+  			res.render('homePage' , { "userId" : email } );
 			//res.redirect('/home');  			
 
 	});
