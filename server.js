@@ -16,6 +16,7 @@ var signin = require("./routes/signin");
 var home =  require("./routes/home");
 var users = require("./routes/users");
 var createEvent = require("./routes/createEvent");
+var eventRegister = require("./routes/eventRegister");
 var eventLink = require("./routes/eventLink");
 var app= express();
 
@@ -37,6 +38,7 @@ app.use('/event',event);
 app.use('/signup',signup);
 app.use('/signin',signin);
 app.use('/home',home);
+app.use('/eventRegister',eventRegister);
 app.use('/createEvent',createEvent);
 app.use('/users',users);
 app.use('/r',eventLink);
