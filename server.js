@@ -12,6 +12,7 @@ var bodyParser = require('body-parser');
 var event = require("./routes/event");
 var index = require("./routes/index");
 var signup = require("./routes/signup");
+var home = require("./routes/home");
 var app= express();
 
 
@@ -30,6 +31,7 @@ app.set('view engine','ejs');
 app.use('/',index);
 app.use('/event',event);
 app.use('/signup',signup);
+app.use('/home',home);
 app.listen(3000);
 console.log("server on ");
 

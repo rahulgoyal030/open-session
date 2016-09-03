@@ -19,7 +19,7 @@ router.post('/', function  (req,res) {
    var first = req.body.firstname;
    var last = req.body.lastname;
    var email  = req.body.email;
-   var pass = req.body.password;
+   var pass = req.body.newpassword;
 
 	var query = "INSERT INTO user( firstname, lastname , email , password) VALUES (' "+ first + "', '"+ last + " ',' " + email + "',' "+ pass +"')";
     
@@ -29,7 +29,8 @@ router.post('/', function  (req,res) {
  
   			console.log(" working ");
 
-			res.render('home');  			
+  			res.render('/homePage');
+			//res.redirect('/home');  			
 
 	});
 
