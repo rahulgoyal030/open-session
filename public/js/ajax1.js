@@ -20,7 +20,7 @@
 		var row = $('<tr></tr>').attr({ class: ["success"].join(' ') }).appendTo(mytable);
         $('<td></td>').append($('<a></a>').text(result[i].topic).attr("href", "/r/"+result[i].id)).appendTo(row);
 			$('<td></td>').text(result[i].type).appendTo(row);
-			$('<td></td>').text("   						").appendTo(row); 
+			$('<td></td>').text(result[i].time).appendTo(row);
 			$('<td></td>').append($('<button></button>').text("Register").attr( {class : ["btn btn-success"].join(' ') , 'onClick':'stopMoving()' } ) ).appendTo(row); 
 		var row = $('<tr></tr>').attr({ class: ["success"].join(' ') }).appendTo(mytable);
 			

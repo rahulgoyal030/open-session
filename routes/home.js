@@ -15,7 +15,7 @@ router.get('/', function  (req,res) {
 
 	console.log(req.url);
 
-	var query1 = "select * from events limit 10";
+	var query1 = "select * from events";
     connection.query( query1 , function(err, rows) {
   		if (err) throw err;
           
