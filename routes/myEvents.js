@@ -11,15 +11,11 @@ var connection = mysql.createConnection({
 
 var router = express.Router();
 
-router.get('/*', function  (req,res) {
+router.get('/', function  (req,res) {
 
   console.log(req.url);
 
-  var url = req.url;
-  var eventid = url.slice(1);
-  console.log(eventid);
-    
-  var query1 = "select * from  events where id='" + eventid +"'";
+  var query1 = "select * from events order by id desc limit 5";
     connection.query( query1 , function(err, rows) {
       if (err) throw err;
           
@@ -27,17 +23,15 @@ router.get('/*', function  (req,res) {
 
       if(len>0)
       {
-           
-          console.log(" in the event" + rows[0].link);
-          var link = rows[0].link;
-          res.render( 'event' , { "link" : link } ); //
-
+        console.log(" hahhahaha");
+        res.send(rows);
       }
-     
+      
 
-  }); 
-
+  });
   
+
+  //res.render('event');
 })
 
 module.exports= router;

@@ -2,7 +2,7 @@
 
     
      
-        	$.ajax({url: "/home", success: function(result){
+        	$.ajax({url: "/myEvents", success: function(result){
     	// 		var row = $('<tr></tr>').addClass('bar').text(obj1.topic);
     	// 		table.append(row);
     	console.log(result);

@@ -15,7 +15,7 @@
     mytable.attr({class: "table"});
 	var rows = new Number(length);
 	var tr = [];
-	$('#profile').attr("href","/users/"+userid);
+	$('#profile').attr("href","/user/"+userid);
     for (var i = 0; i < rows; i++) {
 		var row = $('<tr></tr>').attr({ class: ["success"].join(' ') }).appendTo(mytable);
         $('<td></td>').append($('<a></a>').text(result[i].topic).attr("href", "/r/"+result[i].id)).appendTo(row);
