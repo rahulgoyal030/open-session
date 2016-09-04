@@ -11,22 +11,15 @@ var connection = mysql.createConnection({
 var router = express.Router();
 router.post('/', function  (req,res) {
 
-	console.log(req.body);
-	var username = req.body.username;
-    var password = req.body.password;
+  console.log(req.body);
+    var username = req.body.username;
+    var pass = req.body.password;
 
-    connection.query("SELECT * FROM user", function(Err, Rows, Fields){
-                for(var i=0; i<Rows.length; i++){
-                    if(Rows[i].password==password && Rows[i].email==username)
-                    {
-                    	  res.render('homePage');
-                    }
-                    else
-                    {
-                    	//alert("Please enter correct user name and password.")
-                    }
-                }
-            });
+    connection.query("SELECT * FROM user WHERE email=' "+ username + "' and password = ' "+ pass +" ' " ,function(Err, records){
+          if(Err) throw Err;
+        
+          res.render('homePage' ,  { "userId" : username });
+});
 });
 
 module.exports= router;
