@@ -1,4 +1,4 @@
-# open-session
+# Open-Session
 ## Problem We try to solve
 =>Bridge the gap between the  top-tier college students and low-mediun tier college students <br>
 =>Providing Quality Education to Students in Remote Areas<br>
