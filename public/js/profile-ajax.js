@@ -13,7 +13,7 @@
 	var tr = [];
 	for (var i = 0; i < rows; i++) {
 		var row = $('<tr></tr>').attr({ class: ["success"].join(' ') }).appendTo(mytable);
-			$('<td></td>').text(result[i].topic).appendTo(row); 
+			$('<td></td>').append($('<a></a>').text(result[i].topic).attr("href", "/r/"+result[i].id)).appendTo(row);
 			$('<td></td>').text(result[i].type).appendTo(row);
 			$('<td></td>').text("   						").appendTo(row); 
 			$('<td></td>').append($('<p></p>').text("Successfully Registered").attr( {class : ["text-success"].join(' ') } ) ).appendTo(row); 

@@ -10,21 +10,42 @@
   
     
 
-
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
 
 </script>
     
        
   </head>
 
+
   <body>
-  
+  <nav class="navbar navbar-default" style="background-color: #e3f2fd;">
+	  <div class="container-fluid">
+    	<div class="navbar-header">
+    	  <a class="navbar-brand" href="#">WebSiteName</a>
+    	</div>
+    	<ul class="nav navbar-nav">
+    	  <li  id="home"><a href="">Home</a></li>
+    	  <li><a href="/" id onclick="">Profile</a></li>
+    	 </ul>
+  		</div>
+	</nav>
+	<div class="container">
+	<div class="row"></div>
+	<div class="col-md-5"></div>
+	<div class="col-md-2 well centre"><a href= <%=link%> >
+	YoutubeURL
+	</a></div>
+	<div class="col-md-5"></div>
+	</div>
    <p id="eventLink" > <%=link%> </p>
 
   
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/sqWV97aGsPY" frameborder="0" allowfullscreen></iframe>
-
-   
+<iframe  width="854" height="480" src="https://www.youtube.com/embed/sqWV97aGsPY" frameborder="0" allowfullscreen class="col-xs-12 text-center"></iframe>
   </body>
 </html>

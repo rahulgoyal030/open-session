@@ -20,9 +20,10 @@ router.post('/', function  (req,res) {
    var time = req.body.time;
    var type  = req.body.type;
    var link = req.body.link;
-
-	var query = "INSERT INTO events( topic, time , type , link) VALUES (' "+ topic+ "', '"+ time + " ',' " + type + "',' "+ link +"')";
-    
+   
+   console.log(type + " " + link);
+	//var query = "INSERT INTO events( topic, time , type , link) VALUES (' "+ topic+ "', '"+ time + " ',' " + type + "',' "+ link +"')";
+    var query = "INSERT INTO events(topic, time , type , link) VALUES (' "+ topic + "', '"+ time+ " ',' " + type + " ',' " + link +"')";
     //var query1 = "select * from links where short='" +value +"'";
        connection.query( query , function(err, rows) {
   			if (err) throw err;

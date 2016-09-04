@@ -21,7 +21,7 @@
         $('<td></td>').append($('<a></a>').text(result[i].topic).attr("href", "/r/"+result[i].id)).appendTo(row);
 			$('<td></td>').text(result[i].type).appendTo(row);
 			$('<td></td>').text("   						").appendTo(row); 
-			$('<td></td>').append($('<button></button>').text("Register").attr( {class : ["btn btn-success"].join(' ') } ) ).appendTo(row); 
+			$('<td></td>').append($('<button></button>').text("Register").attr( {class : ["btn btn-success"].join(' ') , 'onClick':'stopMoving()' } ) ).appendTo(row); 
 		var row = $('<tr></tr>').attr({ class: ["success"].join(' ') }).appendTo(mytable);
 			
 		 		 
@@ -32,15 +32,12 @@
 
   });
 
-
-
-
-
-
-
-
-
-
+function stopMoving(e)
+{
+   // e.preventDefault();
+    console.log("here ");
+    alert(" you are Registered for event");
+}
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
